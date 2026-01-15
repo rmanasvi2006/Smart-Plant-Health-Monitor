@@ -204,6 +204,8 @@ Open the file in a browser
 
 View live sensor data in a clean, professional dashboard
 
+## Demo Link: https://drive.google.com/file/d/1Gtw55avt31PannVgabQe77Y-HSKFHCko/view?usp=drivesdk
+
 ## Outputs & Results
 
 Real-time ThingSpeak graphs for all sensors
