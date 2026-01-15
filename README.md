@@ -233,5 +233,6 @@ It is cost-effective, scalable, and practical, making it suitable for real-world
 
 ## Author
 Manasvi
+
 Project: Smart Plant Health Monitor
 
