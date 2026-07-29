@@ -1,4 +1,4 @@
-🌱 Smart Plant Health Monitor
+ Smart Plant Health Monitor
 
 An end-to-end IoT + Machine Learning based Smart Plant Health Monitoring System that continuously monitors soil moisture, temperature, and humidity to determine plant health in real time.
 The system combines ESP32-based sensing, cloud data aggregation (ThingSpeak), ML-based classification, LED-based feedback, and a web dashboard for visualization.
@@ -17,15 +17,15 @@ Enable data-driven plant care
 
 ## Key Features
 
-🌡️ Real-time sensing using Soil Moisture sensor and DHT11 (Temperature & Humidity)
+ Real-time sensing using Soil Moisture sensor and DHT11 (Temperature & Humidity)
 
-📡 ESP32-based IoT system with Wi-Fi connectivity
+ ESP32-based IoT system with Wi-Fi connectivity
 
-☁️ Cloud data logging & visualization using ThingSpeak
+ Cloud data logging & visualization using ThingSpeak
 
-🤖 Machine Learning (Decision Tree – Supervised Learning) for plant condition classification
+ Machine Learning (Decision Tree – Supervised Learning) for plant condition classification
 
-🚦 LED-based visual feedback
+ LED-based visual feedback
 
 🔴 Red → Dry
 
@@ -33,9 +33,9 @@ Enable data-driven plant care
 
 🟢 Green → Wet
 
-📊 Custom HTML/CSS Dashboard for live data monitoring
+ Custom HTML/CSS Dashboard for live data monitoring
 
-📁 Clean dataset generation for ML training
+ Clean dataset generation for ML training
 
 ## Hardware Components Used
 
