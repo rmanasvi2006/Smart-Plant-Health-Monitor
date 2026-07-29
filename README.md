@@ -45,27 +45,7 @@ Enable data-driven plant care
 - DHT11
 - LEDs
  
- 📂 Project Structure
-Smart-Plant-Health-Monitor/
-│
-├── Arduino_Code/
-│   └── smart_plant_monitor.ino
-│
-├── ML/
-│   ├── Smart_Plant_Sensor_Dataset.xlsx
-│   └── train_model.py
-│
-├── Dashboard/
-│   └── index.html
-│
-├── Images/
-│   ├── Hardware setup
-│   ├── Serial Monitor outputs
-│   └── ThingSpeak dashboards
-│
-└── README.md
-
-## System Workflow
+ ## System Workflow
 
 Sensors collect data
 ↓
