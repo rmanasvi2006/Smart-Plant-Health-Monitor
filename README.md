@@ -1,11 +1,10 @@
- Smart Plant Health Monitor
-
-An end-to-end IoT + Machine Learning based Smart Plant Health Monitoring System that continuously monitors soil moisture, temperature, and humidity to determine plant health in real time.
-The system combines ESP32-based sensing, cloud data aggregation (ThingSpeak), ML-based classification, LED-based feedback, and a web dashboard for visualization.
+Smart Plant Health Monitor
+ 
+Smart Plant Health Monitor is an IoT-enabled monitoring system that combines real-time environmental sensing, cloud-based data visualization, and machine learning to assess plant health. The system continuously monitors soil moisture, temperature, and humidity, classifies plant conditions using a Decision Tree model, and provides live feedback through a web dashboard and visual indicators.
 
 ## Project Motivation
 
-Manual plant monitoring is inefficient, subjective, and error-prone. This project aims to provide a low-cost, automated, and scalable solution to monitor plant health using real-time sensor data and intelligent decision-making.
+Manual plant monitoring can be time-consuming and inconsistent. This project provides an automated, low-cost solution for continuously monitoring plant health using IoT sensors, cloud analytics, and machine learning. By combining real-time sensing with intelligent classification, the system helps detect plant stress early and supports more informed plant care.
 
 By integrating IoT + Cloud + Machine Learning, the system can:
 
@@ -17,63 +16,36 @@ Enable data-driven plant care
 
 ## Key Features
 
- Real-time sensing using Soil Moisture sensor and DHT11 (Temperature & Humidity)
+- Real-time monitoring of soil moisture, temperature, and humidity
+- Interactive dashboard for live sensor visualization
+- Cloud-based data logging and analytics using ThingSpeak
+- Decision Tree–based machine learning for plant health classification
+- ESP32-based wireless data acquisition
+- LED indicators for immediate health status feedback
+- Dataset generation for machine learning training
 
- ESP32-based IoT system with Wi-Fi connectivity
+ ## Tech Stack
 
- Cloud data logging & visualization using ThingSpeak
+### Programming Languages
+- Python
+- JavaScript
+- HTML5
+- CSS3
 
- Machine Learning (Decision Tree – Supervised Learning) for plant condition classification
+### IoT & Cloud
+- ESP32
+- ThingSpeak
 
- LED-based visual feedback
+### Machine Learning
+- scikit-learn
+- pandas
 
-🔴 Red → Dry
-
-🟡 Yellow → Moist
-
-🟢 Green → Wet
-
- Custom HTML/CSS Dashboard for live data monitoring
-
- Clean dataset generation for ML training
-
-## Hardware Components Used
-
-ESP32 Development Board
-
-Soil Moisture Sensor (Analog)
-
-DHT11 Temperature & Humidity Sensor
-
-Breadboard
-
-LEDs (Red, Yellow, Green)
-
-Resistors (220Ω / 330Ω)
-
-Jumper Wires
-
-USB Cable
-
-## Software & Tools
-
-Arduino IDE
-
-Python 3.x
-
-Libraries:
-
-pandas
-
-scikit-learn
-
-matplotlib (optional)
-
-ThingSpeak Cloud Platform
-
-HTML, CSS, JavaScript (Dashboard)
-
-📂 Project Structure
+### Hardware
+- Soil Moisture Sensor
+- DHT11
+- LEDs
+ 
+ 📂 Project Structure
 Smart-Plant-Health-Monitor/
 │
 ├── Arduino_Code/
@@ -95,138 +67,61 @@ Smart-Plant-Health-Monitor/
 
 ## System Workflow
 
-Sensors collect soil moisture, temperature, and humidity data
+Sensors collect data
+↓
 
-ESP32 reads sensor values and:
+ESP32 processes sensor readings and updates LED status
 
-Controls LEDs based on thresholds
+↓
 
-Sends data to ThingSpeak
+Sensor data is transmitted to ThingSpeak
 
-ThingSpeak stores and visualizes real-time data
+↓
 
-Dataset is exported from ThingSpeak / Serial Monitor
+ThingSpeak stores historical readings
 
-ML Model is trained using labeled data
+↓
 
-Decision Tree classifies plant condition (Dry / Moist / Wet)
+Decision Tree model classifies plant condition
 
-Dashboard displays live sensor data and trends
+↓
 
-## Machine Learning Approach
+Dashboard visualizes live data and trends
 
-Type: Supervised Learning
+## Machine Learning
 
-Algorithm: Decision Tree Classifier
+The project uses a supervised Decision Tree classifier trained on sensor data collected from the monitoring system.
 
-Input Features:
+Input Features
+- Soil Moisture
+- Temperature
+- Humidity
 
-Soil Moisture
-
-Temperature
-
-Humidity
-
-Output Classes:
-
-Dry
-
-Moist
-
-Wet
-
-The trained model learns decision boundaries from real sensor data and generates interpretable rules for classification.
-
-## How to Run the Project
-1️⃣ Arduino Setup
-
-Open Arduino_Code/smart_plant_monitor.ino in Arduino IDE
-
-Select:
-
-Board: ESP32 Dev Module
-
-Correct COM Port
-
-Update the following in the code:
-
-const char* ssid = "YOUR_WIFI_NAME";
-const char* password = "YOUR_WIFI_PASSWORD";
-const char* apiKey = "YOUR_THINGSPEAK_WRITE_API_KEY";
-
-
-Upload the code to ESP32
-
-2️⃣ ThingSpeak Setup
-
-Create a ThingSpeak account
-
-Create a new channel
-
-Add fields:
-
-Field 1 → Soil Moisture
-
-Field 2 → Temperature
-
-Field 3 → Humidity
-
-Copy the Write API Key into Arduino code
-
-Observe real-time graphs updating every few seconds
-
-3️⃣ Machine Learning Training
-
-Navigate to the ML folder
-
-Install required libraries:
-
-pip install pandas scikit-learn
-
-
-Run the training script:
-
-python train_model.py
-
-
-View model accuracy and learned decision rules in terminal
-
-4️⃣ Dashboard Setup
-
-Open Dashboard/index.html
-
-Replace:
-
-const channelID = "YOUR_CHANNEL_ID";
-
-
-Open the file in a browser
-
-View live sensor data in a clean, professional dashboard
+Output Classes
+- Dry
+- Moist
+- Wet
 
 ## Demo Link: https://drive.google.com/file/d/1Gtw55avt31PannVgabQe77Y-HSKFHCko/view?usp=drivesdk
 
-## Outputs & Results
+## Results
+## Results
 
-Real-time ThingSpeak graphs for all sensors
+The system successfully demonstrated:
 
-Accurate ML-based classification
+- Real-time monitoring of environmental conditions
+- Cloud-based data collection and visualization
+- Machine learning–based plant health classification
+- Automated visual feedback using LED indicators
+- End-to-end IoT to cloud monitoring workflow
 
-Clear LED indications for plant health
+## Future Improvements
 
-Exportable dataset for analysis
-
-Fully working IoT → Cloud → ML pipeline
-
-## Future Enhancements
-
-Mobile app integration
-
-Predictive watering recommendations
-
-Multiple plant support
-
-Database integration (Firebase / MongoDB)
+- Mobile application support
+- Predictive irrigation recommendations
+- Multi-plant monitoring
+- Database integration for long-term analytics
+- User authentication and historical reports
 
 ## Conclusion
 
